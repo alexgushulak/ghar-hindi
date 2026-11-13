@@ -1520,3 +1520,25 @@ body {
 .freq-grid .freq-unit p {
   min-height: 0;
 }
+.daily-goal {
+  padding: 18px 22px;
+  margin: 0 0 14px;
+}
+.daily-goal .row {
+  font-size: 12px;
+}
+.daily-goal .row span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.daily-goal .progress-track {
+  margin-bottom: 0;
+}
+.topic-row {
+  margin: 22px 0 0;
+  font-size: 12px;
+}
+.topic-row small {
+  font-size: 10px;
+  color: var(--muted);
+}

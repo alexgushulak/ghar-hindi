@@ -86,7 +86,15 @@ function poolFor(deck, p) {
       ...new Map(
         [
           ...due.slice(0, 20),
-          ...pick(coreIds)
+          ...pick([
+            ...new Set([
+              ...coreIds.slice(0, 50),
+              ...frequencyIds,
+              ...coreIds,
+              ...sentenceIds,
+              ...words.map((w) => w.id),
+            ]),
+          ])
             .filter((w) => fresh.includes(w))
             .slice(0, 10),
           ...weak.slice(0, 5),
@@ -487,6 +495,27 @@ function Studio({ name, onSwitch }) {
               <button className="link-btn" onClick={() => go("progress")}>
                 See progress ↗
               </button>
+            </div>
+            <div className="daily-goal panel">
+              <div className="row">
+                <b>Today’s goal</b>
+                <span>
+                  {Math.min(20, Number(p.days[dayKey()] || 0))} / 20 practice
+                  actions
+                </span>
+              </div>
+              <div className="progress-track">
+                <div
+                  className="progress-bar"
+                  style={{
+                    width:
+                      Math.min(
+                        100,
+                        (Number(p.days[dayKey()] || 0) / 20) * 100,
+                      ) + "%",
+                  }}
+                />
+              </div>
             </div>
             <div className="daily-grid">
               {[
@@ -2400,6 +2429,35 @@ function Progress({ p, dispatch, name, pending }) {
         ) : (
           <p className="empty">Complete your first test to start your graph.</p>
         )}
+      </section>
+      <section className="panel analytics-panel">
+        <h2>Progress by topic</h2>
+        {["Basics", "Nouns", "Verbs", "Adjectives", "Phrases"].map((cat) => {
+          const all = active(p).filter((w) => w.cat === cat),
+            studied = all.filter(
+              (w) => p.cards[w.id]?.reviews || p.cards[w.id]?.quizAttempts,
+            ).length,
+            mastered = all.filter((w) => p.cards[w.id]?.level >= 3).length;
+          return (
+            <div className="topic-row" key={cat}>
+              <div className="row">
+                <b>{cat}</b>
+                <small>
+                  {studied} practiced · {mastered} mastered / {all.length}
+                </small>
+              </div>
+              <div className="progress-track">
+                <div
+                  className="progress-bar"
+                  style={{
+                    width:
+                      (all.length ? (mastered / all.length) * 100 : 0) + "%",
+                  }}
+                />
+              </div>
+            </div>
+          );
+        })}
       </section>
       <section className="panel analytics-panel">
         <h2>Words that need a little love</h2>

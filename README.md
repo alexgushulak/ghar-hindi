@@ -68,7 +68,7 @@ Official references: [Using Volumes](https://docs.railway.com/volumes), [Volume 
 - Grammar: seven pronouns, ten tense/reference views, noun genders/plurals, respectful commands, the special “to like” construction, graded noun/verb drills, and answer reveal.
 - Hindi Rush: four difficulties, word sources/categories, hand-picked words, Roman hints, English aliases, combos, levels, five lives, pause/resume, auto-pause, saved runs, and personal bests. Active mobile play uses a compact layout to leave room for the keyboard.
 - Shared comparison: practiced/mastered cards, reviews, tests, accuracy, active days/streak, arcade bests, and a leaderboard filterable by difficulty/source. Hand-picked decks may differ, so those scores are informal comparisons.
-- Personal progress: review forecast, accuracy graph, recent tests, weak words, arcade history, and original JSON import/export with a browser-local pre-import backup.
+- Personal progress: daily goal, topic mastery, review forecast, accuracy graph, recent tests, weak words, arcade history, and original JSON import/export with a browser-local pre-import backup.
 
 Speech uses browser speech synthesis and available Hindi voices; support and quality vary by device.
 
