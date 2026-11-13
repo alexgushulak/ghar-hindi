@@ -476,7 +476,11 @@ function Studio({ name, onSwitch }) {
                 label="Test accuracy"
                 value={stats.accuracy === null ? "—" : stats.accuracy + "%"}
               />
-              <Metric label="Day streak" value={stats.streak} detail="Keep showing up" />
+              <Metric
+                label="Day streak"
+                value={stats.streak}
+                detail="Keep showing up"
+              />
             </div>
             <div className="section-head">
               <h2>Your daily rhythm</h2>

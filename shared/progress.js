@@ -144,9 +144,13 @@ export function reduce(p, action) {
   return p;
 }
 export function streak(p) {
-  let n=0,d=new Date();
-  if(!p.days[dayKey(d)])d.setDate(d.getDate()-1);
-  while(p.days[dayKey(d)]){n++;d.setDate(d.getDate()-1)}
+  let n = 0,
+    d = new Date();
+  if (!p.days[dayKey(d)]) d.setDate(d.getDate() - 1);
+  while (p.days[dayKey(d)]) {
+    n++;
+    d.setDate(d.getDate() - 1);
+  }
   return n;
 }
 export function summary(p) {

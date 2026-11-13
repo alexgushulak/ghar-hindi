@@ -2,6 +2,14 @@
 
 A standalone React application for **Alex and Andrew**, with a Node/Express API and SQLite database. Choose a name to begin: no account setup or passwords. Both learners use the same deployed URL, while progress stays separate.
 
+## Live app
+
+- [Open Ghar Hindi](https://ghar-hindi-production.up.railway.app)
+- [Public GitHub repository](https://github.com/alexgushulak/ghar-hindi)
+- [Railway project](https://railway.com/project/6e60f781-3ddb-432d-8fd6-c7c0934d25cc)
+
+Production is connected to `main`, with a 512 MB `ghar-progress` volume at `/data`, `DATA_DIR=/data`, and one replica in `us-west2`. Pushes to `main` deploy automatically.
+
 ## Run locally
 
 Install **Node.js 22.13 or newer**, then run these commands inside this app folder:
