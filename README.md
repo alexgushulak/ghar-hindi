@@ -4,7 +4,7 @@ A standalone React application for **Alex and Andrew**, with a Node/Express API 
 
 ## Live app
 
-- [Open Ghar Hindi](https://ghar-hindi-production.up.railway.app)
+- [Open Ghar Hindi](https://ghar-hindi.up.railway.app)
 - [Public GitHub repository](https://github.com/alexgushulak/ghar-hindi)
 - [Railway project](https://railway.com/project/6e60f781-3ddb-432d-8fd6-c7c0934d25cc)
 

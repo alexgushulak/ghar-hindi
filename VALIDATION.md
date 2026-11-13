@@ -8,3 +8,5 @@
 - Railway has one replica in `us-west2`, with a live 512 MB `ghar-progress` volume mounted at `/data`; database path is `/data/ghar.sqlite`. No learning databases or secrets are tracked by Git.
 
 Browser QA scores are confined to a temporary local database. Production persistence verification changes only a reversible profile preference and then restores it.
+
+- Live persistence check: a reversible profile preference survived a fresh GitHub-triggered Railway deployment on the same volume, then was restored. Both profiles’ learning data were retained.
